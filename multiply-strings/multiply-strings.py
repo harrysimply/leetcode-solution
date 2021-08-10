@@ -7,22 +7,12 @@ class Solution:
         
         """
 
-        def convert_string_to_num(num_string):
-            char_num_map = {
-                "0":0,
-                "1":1,
-                "2":2,
-                "3":3,
-                "4":4,
-                "5":5, "6":6,"7":7,"8":8,"9":9,
-            }
-            char_length = len(num_string)
-            num_list = [char_num_map[i] for i in num_string]
-            num_list.reverse()
+        def to_int(num_string):
+            num_map = {str(i):i for i in range(10)}
             int_num = 0
-            for idx, j in enumerate(num_list):
-                int_num+=j*(10**idx)
+            for j in num_string:
+                int_num=int_num*10+num_map[j]
             return int_num
             
-        res = convert_string_to_num(num1)* convert_string_to_num(num2)
+        res = to_int(num1)* to_int(num2)
         return str(res)
