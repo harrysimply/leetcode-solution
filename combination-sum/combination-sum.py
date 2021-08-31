@@ -14,6 +14,11 @@ class Solution:
         
         参考：https://leetcode.com/problems/combination-sum/discuss/16554/Share-My-Python-Solution-beating-98.17
         
+        可以在纸上画出来target减去每个item的值，当差值大于0然后进入下一轮搜索，当差值等于0则搜索结束，当差值小于0则退出搜索。
+        解题思路：
+        1. 先对candidate按大小个排序
+        2. 使用深度优先搜索进行搜索。
+        
         '''
         res = []
         
