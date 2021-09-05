@@ -19,6 +19,8 @@ class Solution:
         如果将i中最后一位的dp值和最大值做比较，则可以出现kadane算法
         用一个指针保存迄今为止的最大值，用一个指针保存当前下标为i的子序列的最大值，最终返回两者的最大值。
         时间复杂度O(n),空间复杂度O(1)
+        
+        参考：https://zhuanlan.zhihu.com/p/85188269
         """
         dp = [ 0 for _ in nums ]
         last_max = max_num = nums[0]
