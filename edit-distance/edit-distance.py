@@ -1,6 +1,10 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
-        
+        """
+        这道题的写法需要理解莱文斯坦距离（Levinstein Distance）公式的含义。
+        根据莱文斯坦公示完成代码。
+        参考：https://www.youtube.com/watch?v=b6AGUjqIPsA
+        """
         row = len(word1) + 1
         column = len(word2) + 1
         
@@ -24,4 +28,4 @@ class Solution:
                         cache[i][j] = min(replace, insert, remove)
                     
                 
-        return cache[row-1][column-1]      
+        return cache[row-1][column-1]  
