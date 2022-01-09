@@ -26,6 +26,7 @@ class Solution:
         cycle = numRows*2 -2
         
         
+        
         """
         if numRows == 1:
             return s
@@ -36,7 +37,7 @@ class Solution:
             
             for j in range(i, len(s), cycle):
                 res.append(s[j])
-                k = j + cycle - 2*i
+                k = j + cycle - 2*i # 这一步的pattern有一些疑问
                 if i !=0 and i != (numRows -1) and k < len(s):
                     res.append(s[k])
                 
