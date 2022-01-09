@@ -10,7 +10,7 @@ class Solution:
         res = ""
         for c in strs[0]:
             for item in strs[1:]:
-                if index >= len(item):
+                if index == len(item):
                     return res
                 if item[index] != c:
                     return res
