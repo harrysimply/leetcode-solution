@@ -12,7 +12,6 @@ class Solution:
         '''
         if x < 0 or (x >0 and x%10==0):
             return False
-        b = x
         res = 0
         while x > res:
             res = 10 * res + x % 10
