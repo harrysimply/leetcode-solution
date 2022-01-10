@@ -7,19 +7,19 @@ class Solution:
         # else:
         #     return True
         
-        新方法： x//10 得到 前面的数字， x%10得到后面的数字，通过一个循环获得一个新的数字
+        新方法： x//10 得到 前面的数字， x%10得到后面的数字，res = 10 * res + x % 10 一轮循环后可以创建一个新数字
         
         '''
-        if x < 0:
+        if x < 0 or (x >0 and x%10==0):
             return False
         b = x
         res = 0
-        while x > 0:
+        while x > res:
             res = 10 * res + x % 10
             
             x = x // 10
             
-        return res == b
+        return res == x or res//10 == x
             
         
         
