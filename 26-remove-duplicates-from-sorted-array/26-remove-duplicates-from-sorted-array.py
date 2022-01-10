@@ -5,13 +5,12 @@ class Solution:
         要求空间复杂度（1）
         从列表的第一个数开始，后面的数字如果重复则删掉后面的数字
         '''
-        if len(nums) == 0 : return None
-        a = nums[0]
-        for item in nums[1:]:
-            if item == a:
-                nums.remove(item)
-            else:
-                a = item
-        return len(nums)
+        if len(nums) < 2 : return len(nums)
+        a = 1 
+        for i in range(1,len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[a] = nums[i]
+                a+=1
+        return a
             
         
