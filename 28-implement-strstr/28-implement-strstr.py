@@ -6,6 +6,4 @@ class Solution:
         
         如果在稻草堆里找到针，则返回针在稻草堆里的位置，如果不存在返回-1。如果针是空值则返回0.
         '''
-        if needle == "":
-            return 0
         return haystack.find(needle) 
