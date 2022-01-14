@@ -24,6 +24,7 @@ class Solution:
         x^ 5 = x * x^2 * x^ 2
         x^2 = x^1* x^1
         x^1 = x * x^0 * x^0
+        使用二分法计算，时间复杂度位O(logn)
         '''
         
         def helper(x, n):
