@@ -6,7 +6,6 @@ class Solution:
         二分法从两边开始搜索，如果中间的数字比target小了，则中间的数组变成左边界。
         '''
         l, r = 0, len(nums)-1
-        if target > nums[r]: return -1
         
         while (l<=r):
             mid = l + (r-l)//2
