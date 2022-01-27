@@ -15,6 +15,7 @@ class Solution:
                 nums[j] = tmp
                 i+=1
                 j-=1
+        # 防止k比nums长度还要长        
         k = k % len(nums)
         reverse(nums, 0, len(nums)-1-k)
         reverse(nums, len(nums)-k, len(nums)-1)
