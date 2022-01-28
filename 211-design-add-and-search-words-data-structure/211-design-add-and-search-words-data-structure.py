@@ -7,7 +7,7 @@ class WordDictionary:
     '''
     设计一个数据结构（字典），可以给里面加新词也可以去搜索是否匹配上。
     并且还包括通配符，如果有“.”就可以匹配任意字符。
-    使用字典数数据结构
+    参考： https://www.youtube.com/watch?v=BTf05gs_8iU
     '''
     def __init__(self):
         self.root = TrieNode()
