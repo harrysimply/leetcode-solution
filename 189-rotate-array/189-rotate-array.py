@@ -7,16 +7,17 @@ class Solution:
         问题变成[1,2,3,4,5,6,7],先将[1，2，3，4]reverse变成[4,3,2,1],然后将[5,6,7]变成[7,6,5],最后将[4,3,2,1,7,6,5]整体reverse，变成[5,6,7,1,2,3,4]
         """
         # 使用双指针实现数组逆序
-        def reverse(nums,i,j):
-            tmp =0
-            while(i<j):
-                tmp = nums[i] 
+        def reverse(nums, i,j):
+            tmp = 0
+            while i<j:
+                tmp = nums[i]
                 nums[i] = nums[j]
                 nums[j] = tmp
                 i+=1
                 j-=1
-        # 防止k比nums长度还要长        
         k = k % len(nums)
-        reverse(nums, 0, len(nums)-1-k)
+        
+        reverse(nums, 0, len(nums)-k-1)
         reverse(nums, len(nums)-k, len(nums)-1)
         reverse(nums, 0, len(nums)-1)
+            
